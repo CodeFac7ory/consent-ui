@@ -1,0 +1,84 @@
+{
+  "consents": [
+    {
+      "id": 0,
+      "name": "First Consent",
+      "email": "first.consent@gmail.com",
+      "newsletter": false,
+      "ads": false,
+      "statistics": true
+    },
+    {
+      "id": 1,
+      "name": "Second Consent",
+      "email": "second.consent@gmail.com",
+      "newsletter": true,
+      "ads": false,
+      "statistics": true
+    },
+    {
+      "id": 2,
+      "name": "Third Consent",
+      "email": "third.consent@gmail.com",
+      "newsletter": true,
+      "ads": true,
+      "statistics": true
+    },
+    {
+      "id": 4,
+      "name": "damjanovicb@googlemail.com",
+      "email": "damjanovicb@googlemail.com",
+      "newsletter": true,
+      "ads": false,
+      "statistics": false
+    },
+    {
+      "id": 5,
+      "name": "damjanovicb@googlemail.com",
+      "email": "damjanovicb@googlemail.com",
+      "newsletter": false,
+      "ads": false,
+      "statistics": true
+    },
+    {
+      "id": 6,
+      "name": "aaa",
+      "email": "danica.uhrin@gmail.com",
+      "newsletter": false,
+      "ads": true,
+      "statistics": false
+    },
+    {
+      "id": 7,
+      "name": "damjanovicb@googlemail.com",
+      "email": "damjanovicb@googlemail.com",
+      "newsletter": false,
+      "ads": true,
+      "statistics": false
+    },
+    {
+      "id": 8,
+      "name": "aaa",
+      "email": "damjanovicb@googlemail.com",
+      "newsletter": false,
+      "ads": false,
+      "statistics": false
+    },
+    {
+      "id": 9,
+      "name": "damjanovicb@googlemail.com",
+      "email": "b.damjanovic@finatix.de",
+      "newsletter": true,
+      "ads": false,
+      "statistics": false
+    },
+    {
+      "id": 10,
+      "name": "damjanovicb@googlemail.com",
+      "email": "damjanovicb@googlemail.com",
+      "newsletter": true,
+      "ads": false,
+      "statistics": false
+    }
+  ]
+}
