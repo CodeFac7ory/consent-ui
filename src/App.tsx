@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import './App.css';
 import ConsentTable from './features/consents/ConsentTable/ConsentTable';
 import {
+	Container,
+	Grid,
 	List,
 	ListItem,
 	ListItemText,
@@ -71,25 +73,28 @@ const Item = styled(Paper)(({ theme }) => ({
 const App: React.FC = () => {
 	return (
 		<div className="App" data-testid="App">
-			<header></header>
 			<Router>
-				<Stack direction="row" spacing={2}>
-					<Item className="Navigation">
-						<Paper elevation={0}>
-							<List aria-label="navigation">
-								<ListItemLink to="/give-consent" primary="Give consent" />
-								<ListItemLink to="/consents" primary="Collected consents" />
-							</List>
-						</Paper>
-					</Item>
-					<Item className="Content">
-						<Routes>
-							<Route path="/" element={<Navigate to="/give-consent" />} />
-							<Route path="/give-consent" element={<ConsentForm />} />
-							<Route path="/consents" element={<ConsentTable />} />
-						</Routes>
-					</Item>
-				</Stack>
+				<Container>
+					<Grid container spacing={3}>
+						<Grid item xs={12} md={3}>
+							<Paper elevation={0}>
+								<List aria-label="navigation">
+									<ListItemLink to="/give-consent" primary="Give consent" />
+									<ListItemLink to="/consents" primary="Collected consents" />
+								</List>
+							</Paper>
+						</Grid>
+						<Grid item xs={12} md={9}>
+							<Item className="Content">
+								<Routes>
+									<Route path="/" element={<Navigate to="/give-consent" />} />
+									<Route path="/give-consent" element={<ConsentForm />} />
+									<Route path="/consents" element={<ConsentTable />} />
+								</Routes>
+							</Item>
+						</Grid>
+					</Grid>
+				</Container>
 			</Router>
 		</div>
 	);

@@ -113,9 +113,9 @@ const ConsentForm: React.FC<ConsentFormProps> = () => {
 							</FormHelperText>
 						</FormControl>
 					</Item>
-					<Item>I agree to:</Item>
-					<Item>
-						<FormGroup>
+					<Item>I agree to:
+						<br />
+						<FormGroup className={styles.AlignItemsCenter}>
 							<FormControlLabel
 								control={
 									<Checkbox
