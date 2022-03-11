@@ -1,6 +1,6 @@
-#Consent-UI
+# Consent-UI
 
-Depedencies can be installed with:
+The depedencies can be installed with:
 ```
 yarn
 ```
@@ -13,12 +13,12 @@ The tests can be executed with:
 yarn test
 ```
 
-##Libraries and tools used:
+## Libraries and tools used:
 
-###Yarn
+### Yarn
 yarn@1.22.17
 
-###Create React App
+### Create React App
 
 create-react-app@5.0.0
 
@@ -28,22 +28,22 @@ yarn create react-app my-app --template redux-typescript)
 
 typescript@4.6.2
 
-###Redux and Redux Toolkit
+### Redux and Redux Toolkit
 
 react-redux@7.2.6
 
 @reduxjs/toolkit@1.8.0
 
-###React MUI
+### React MUI
 @mui/material@5.5.0
 
-###React Testing Library
+### React Testing Library
 @testing-library/react@12.1.3
 
-###Mock JSON server
+### Mock JSON server
 
 json-server@0.17.0
 
-###Prettier
+### Prettier
 prettier@2.5.1
 
