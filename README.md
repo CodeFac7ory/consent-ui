@@ -9,8 +9,9 @@ The application can be launched with:
 yarn start
 ```
 The application will run on:
+```
 http://localhost:3000/
-
+```
 The tests can be executed with:
 ```
 yarn test
