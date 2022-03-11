@@ -19,6 +19,10 @@ export const fetchConsents = createAsyncThunk('consent/fetch', async () => {
 	return response.json();
 });
 
+/**
+ * Sends async request to create the consent in backend
+ * and after that fetches the consents list from backend
+ */
 export const addConsent = createAsyncThunk(
 	'consent/add',
 	async (consent: Consent, { dispatch }) => {
