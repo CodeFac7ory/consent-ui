@@ -7,17 +7,17 @@ import { Provider } from 'react-redux';
 import { testConsents } from '../../../mocks/handlers';
 
 describe('<ConsentTable />', () => {
-	test('it should mount', async () => {
-		render(
-			<Provider store={store}>
-				<ConsentTable />
-			</Provider>
-		);
+  test('it should mount', async () => {
+    render(
+      <Provider store={store}>
+        <ConsentTable />
+      </Provider>
+    );
 
-		const consentTable = screen.getByTestId('ConsentTable');
+    const consentTable = screen.getByTestId('ConsentTable');
 
-		expect(consentTable).toBeInTheDocument();
+    expect(consentTable).toBeInTheDocument();
 
-		expect(await screen.findByText(testConsents[0].name)).toBeInTheDocument();
-	});
+    expect(await screen.findByText(testConsents[0].name)).toBeInTheDocument();
+  });
 });
