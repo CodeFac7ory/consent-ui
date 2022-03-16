@@ -1,5 +1,12 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  waitForElementToBeRemoved,
+  queryByText,
+} from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ConsentForm from './ConsentForm';
 import { Provider } from 'react-redux';
@@ -55,5 +62,43 @@ describe('<ConsentForm />', () => {
     expect(
       await screen.findByText('Error on consent save')
     ).toBeInTheDocument();
+
+    //This doesnt work becuse of the multiple elements that are satisfying the query
+    // userEvent.click(
+    //   await screen.getByRole('button', {
+    //     name: /Close/i,
+    //   })
+    // );
+
+    //CLose with the button Close
+    userEvent.click(screen.getByText(/Close/i));
+
+    //this doesn't work in some reason
+    // await waitForElementToBeRemoved(() => screen.findByText('Error on consent save'));
+    await waitForElementToBeRemoved(() =>
+      screen.queryByText('Error on consent save')
+    );
+
+    userEvent.click(
+      screen.getByRole('button', {
+        name: /Give consent/i,
+      })
+    );
+
+    expect(
+      await screen.findByText('Error on consent save')
+    ).toBeInTheDocument();
+
+    //Close with the icon x
+    userEvent.click(await screen.getByLabelText(/Close/i));
+
+    // await waitForElementToBeRemoved(() => screen.queryByText('Error on consent save'));
+
+    //This is also not working
+    //Warning: You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one.
+    // await waitFor(() => {
+    //   expect(screen.findByText('Error on consent save')
+    //   ).not.toBeInTheDocument()
+    // });
   });
 });
