@@ -24,7 +24,6 @@ describe('<ConsentForm />', () => {
 
     // getByTestId ist not really advised, but the React CLI generates the tests this way
     const consentForm = screen.getByTestId('ConsentForm');
-
     expect(consentForm).toBeInTheDocument();
   });
 
@@ -58,6 +57,7 @@ describe('<ConsentForm />', () => {
       })
     );
 
+    // getByText is not working here
     expect(
       await screen.findByText('Error on consent save')
     ).toBeInTheDocument();
@@ -72,7 +72,7 @@ describe('<ConsentForm />', () => {
     // Close the snackbar with the button "Close"
     userEvent.click(screen.getByText(/Close/i));
 
-    // This doesn't work in some reason
+    // This doesn't work, because findByText is async
     // await waitForElementToBeRemoved(() => screen.findByText('Error on consent save'));
     await waitForElementToBeRemoved(() =>
       screen.queryByText('Error on consent save')
