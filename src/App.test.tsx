@@ -13,7 +13,10 @@ describe('<App />', () => {
       </Provider>
     );
 
-    expect(screen.getByTestId('App')).toBeInTheDocument();
+    // expect(screen.getByTestId('App')).toBeInTheDocument();
+    // getByRole is cool because it gives you back the list of existing roles
+    // in case there is no match
+    expect(screen.getByRole('list')).toBeInTheDocument();
     expect(screen.getByLabelText('navigation')).toBeInTheDocument();
   });
 

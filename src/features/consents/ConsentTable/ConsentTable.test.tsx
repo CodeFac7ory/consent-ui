@@ -14,8 +14,8 @@ describe('<ConsentTable />', () => {
       </Provider>
     );
 
-    const consentTable = screen.getByTestId('ConsentTable');
-
+    // const consentTable = screen.getByTestId('ConsentTable');
+    const consentTable = screen.getByRole('table');
     expect(consentTable).toBeInTheDocument();
 
     expect(await screen.findByText(testConsents[0].name)).toBeInTheDocument();

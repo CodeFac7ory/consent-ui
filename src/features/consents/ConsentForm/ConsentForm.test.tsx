@@ -21,6 +21,8 @@ describe('<ConsentForm />', () => {
         </BrowserRouter>
       </Provider>
     );
+
+    // getByTestId ist not really advised, but the React CLI generates the tests this way
     const consentForm = screen.getByTestId('ConsentForm');
 
     expect(consentForm).toBeInTheDocument();

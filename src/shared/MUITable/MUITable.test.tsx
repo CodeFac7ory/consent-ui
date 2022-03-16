@@ -12,7 +12,9 @@ describe('<MUITable />', () => {
   test('it should mount empty table', () => {
     render(<MUITable columns={[]} rows={[]} pageSize={testPageSize} />);
 
-    const table = screen.getByTestId('MUITable');
+    // getByTestId ist not really advised, but the React CLI generates the tests this way
+    // const table = screen.getByTestId('MUITable');
+    const table = screen.getByRole('table');
     expect(table).toBeInTheDocument();
   });
 
