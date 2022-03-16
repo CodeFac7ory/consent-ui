@@ -92,7 +92,9 @@ describe('<ConsentForm />', () => {
     //Close with the icon x
     userEvent.click(await screen.getByLabelText(/Close/i));
 
-    // await waitForElementToBeRemoved(() => screen.queryByText('Error on consent save'));
+    await waitForElementToBeRemoved(() =>
+      screen.queryByText('Error on consent save')
+    );
 
     //This is also not working
     //Warning: You seem to have overlapping act() calls, this is not supported. Be sure to await previous act() calls before making a new one.
