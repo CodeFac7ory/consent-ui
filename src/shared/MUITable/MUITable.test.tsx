@@ -16,6 +16,7 @@ describe('<MUITable />', () => {
     // const table = screen.getByTestId('MUITable');
     const table = screen.getByRole('table');
     expect(table).toBeInTheDocument();
+    expect(table).toMatchSnapshot();
   });
 
   test('it should mount paging table', () => {

@@ -59,6 +59,7 @@
       "!src/types/*.ts",
       "!src/config.json"
     ],
+    "coveragePathIgnorePatterns": [".*__snapshots__/.*"],
     "watchPathIgnorePatterns": [
       "mock-data"
     ]

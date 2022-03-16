@@ -8,11 +8,13 @@ import { testConsents } from '../../../mocks/handlers';
 
 describe('<ConsentTable />', () => {
   test('it should mount', async () => {
-    render(
+    const { container } = render(
       <Provider store={store}>
         <ConsentTable />
       </Provider>
     );
+
+    expect(container).toMatchSnapshot();
 
     // const consentTable = screen.getByTestId('ConsentTable');
     const consentTable = screen.getByRole('table');

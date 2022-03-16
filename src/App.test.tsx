@@ -7,11 +7,13 @@ import userEvent from '@testing-library/user-event';
 
 describe('<App />', () => {
   test('renders navigation', async () => {
-    render(
+    const { container } = render(
       <Provider store={store}>
         <App />
       </Provider>
     );
+
+    expect(container).toMatchSnapshot();
 
     // expect(screen.getByTestId('App')).toBeInTheDocument();
     // getByRole is cool because it gives you back the list of existing roles

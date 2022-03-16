@@ -14,13 +14,15 @@ import userEvent from '@testing-library/user-event';
 
 describe('<ConsentForm />', () => {
   test('it should mount', () => {
-    render(
+    const { container } = render(
       <Provider store={store}>
         <BrowserRouter>
           <ConsentForm />
         </BrowserRouter>
       </Provider>
     );
+
+    expect(container).toMatchSnapshot();
 
     // getByTestId ist not really advised, but the React CLI generates the tests this way
     const consentForm = screen.getByTestId('ConsentForm');
