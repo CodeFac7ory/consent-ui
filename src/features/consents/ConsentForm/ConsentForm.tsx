@@ -50,8 +50,9 @@ const ConsentForm: React.FC<ConsentFormProps> = () => {
   useEffect(() => {
     if (addConsentSelector === 'success') {
       navigate('/consents', { replace: true });
+      dispatch(setAddConsentStatus('idle'));
     }
-  }, [addConsentSelector, navigate]);
+  }, [addConsentSelector]);
 
   const [submitDisabled, setSubmitDisabled] = React.useState(true);
 

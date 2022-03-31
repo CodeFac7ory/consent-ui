@@ -23,22 +23,6 @@
       "newsletter": true,
       "ads": true,
       "statistics": true
-    },
-    {
-      "id": 3,
-      "name": "damjanovicb@googlemail.com",
-      "email": "damjanovicb@googlemail.com",
-      "newsletter": true,
-      "ads": false,
-      "statistics": false
-    },
-    {
-      "id": 4,
-      "name": "damjanovicb@googlemail.com",
-      "email": "b.damjanovic@finatix.de",
-      "newsletter": true,
-      "ads": false,
-      "statistics": false
     }
   ]
 }
