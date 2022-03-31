@@ -8,7 +8,7 @@ export interface ConsentState {
   addStatus: 'idle' | 'loading' | 'failed' | 'success';
 }
 
-const initialState: ConsentState = {
+export const initialState: ConsentState = {
   list: [],
   status: 'idle',
   addStatus: 'idle',

@@ -7,7 +7,7 @@ import userEvent from '@testing-library/user-event';
 
 describe('<App />', () => {
   test('renders navigation', async () => {
-    const { container } = render(
+    const {container} = render(
       <Provider store={store}>
         <App />
       </Provider>
